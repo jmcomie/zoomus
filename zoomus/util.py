@@ -1,8 +1,12 @@
+# coding: utf-8
 """Utility classes and functions"""
 
 from __future__ import absolute_import, unicode_literals
 
-from urllib.parse import quote
+try:
+    from urllib.parse import quote
+except ImportError as e:
+    from urllib import quote
 
 import contextlib
 import json
